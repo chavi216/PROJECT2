@@ -1,0 +1,8 @@
+.input-group { width: 100%; display: flex; flex-direction: column; }
+.input-label { margin-bottom: 7px; color: var(--ink); font-size: 13px; font-weight: 650; text-align: right; }
+.custom-input { width: 100%; min-height: 47px; padding: 0 14px; border: 1px solid #cbd5e1; border-radius: 10px; outline: none; color: var(--ink); background: #fff; font-size: 15px; text-align: right; transition: .18s; }
+.custom-input::placeholder { color: #94a3b8; }
+.custom-input:hover { border-color: #94a3b8; }
+.custom-input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(37,99,235,.1); }
+.custom-input.input-error { border-color: #ef4444; }
+.error-message { margin-top: 6px; color: var(--danger); font-size: 12px; text-align: right; }

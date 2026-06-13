@@ -1,0 +1,48 @@
+/* DietPlanBuilder.css - גרסה רספונסיבית */
+
+.diet-builder-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    width: 100%;
+    box-sizing: border-box; /* קריטי כדי שה-padding לא יפרוץ את המסגרת */
+}
+
+.diet-builder-title {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.diet-builder-error {
+    color: red;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.diet-builder-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.diet-builder-input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* התאמה למובייל */
+@media (max-width: 480px) {
+    .diet-builder-card {
+        padding: 15px; /* פחות ריווח בשוליים במובייל כדי לחסוך מקום */
+    }
+    
+    .diet-builder-title {
+        font-size: 16px; /* פונט קטן יותר בכותרת */
+    }
+}

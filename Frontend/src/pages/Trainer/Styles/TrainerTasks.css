@@ -1,0 +1,64 @@
+/* Frontend/src/pages/Trainer/TrainerTasks.css */
+
+.trainer-tasks-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trainer-tasks-title {
+    color: var(--text-dark, #333);
+    margin-bottom: 5px;
+}
+
+.trainer-tasks-subtitle {
+    color: var(--text-light, #666);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.trainer-tasks-select-wrapper {
+    margin-bottom: 20px;
+}
+
+.trainer-tasks-select {
+    padding: 10px 12px;
+    border-radius: var(--border-radius, 8px);
+    border: 1px solid #ccc;
+    min-width: 250px;
+    font-size: 1rem;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.trainer-tasks-select:focus {
+    outline: none;
+    border-color: var(--primary-color, #ff4757);
+    box-shadow: 0 0 0 2px rgba(255, 71, 87, 0.2);
+}
+
+.trainer-tasks-divider {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.trainer-tasks-empty-state {
+    color: #999;
+    font-style: italic;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.1rem;
+}
+
+/* התאמות למסכים קטנים (מובייל) */
+@media (max-width: 768px) {
+    .trainer-tasks-container {
+        padding: 10px;
+    }
+
+    .trainer-tasks-select {
+        width: 100%; /* התיבה תתפוס את כל הרוחב במובייל שיהיה נוח ללחוץ עליה */
+    }
+}

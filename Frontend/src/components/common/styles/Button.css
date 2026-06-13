@@ -1,0 +1,7 @@
+.custom-btn { min-height: 44px; padding: 0 22px; border: 0; border-radius: 9px; cursor: pointer; font-size: 14px; font-weight: 700; white-space: nowrap; transition: .18s; }
+.custom-btn.primary { color: #fff; background: var(--blue); box-shadow: 0 7px 18px rgba(37,99,235,.2); }
+.custom-btn.primary:hover { background: var(--blue-dark); transform: translateY(-1px); box-shadow: 0 10px 22px rgba(37,99,235,.25); }
+.custom-btn.danger { color: var(--danger); background: #fef2f2; border: 1px solid #fecaca; box-shadow: none; }
+.custom-btn.danger:hover { background: #fee2e2; }
+.custom-btn:disabled { color: #94a3b8; background: #e2e8f0; box-shadow: none; cursor: not-allowed; transform: none; }
+@media (max-width:480px) { .custom-btn { min-height: 46px; } }

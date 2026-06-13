@@ -1,0 +1,95 @@
+/* Frontend/src/pages/Client/styles/ClientOnboarding.css */
+
+.onboarding-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: var(--border-radius, 8px);
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.onboarding-loading {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 1.2rem;
+    color: var(--text-light, #666);
+}
+
+.onboarding-title {
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--text-dark, #333);
+    font-size: 1.8rem;
+}
+
+.onboarding-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-light, #666);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* קבוצות הטופס */
+.onboarding-form-group {
+    margin-bottom: 25px;
+}
+
+.onboarding-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-dark, #333);
+}
+
+.onboarding-required-star {
+    color: #ff4757;
+    margin-right: 4px;
+}
+
+.onboarding-select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.onboarding-select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.onboarding-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* התאמות למסכים קטנים (מובייל) */
+@media (max-width: 768px) {
+    .onboarding-container {
+        margin: 20px 15px; /* מרווח קטן מהצדדים של מסך הטלפון */
+        padding: 20px;     /* פדינג פנימי קטן יותר */
+        box-shadow: none;  /* הסרת הצל בנייד למראה שטוח ונקי יותר */
+        border: 1px solid #eaeaea;
+    }
+
+    .onboarding-title {
+        font-size: 1.5rem;
+    }
+
+    .onboarding-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+    
+    .onboarding-select {
+        padding: 14px; /* תיבת בחירה מעט גדולה יותר בנייד כדי שיהיה קל ללחוץ במגע אצבע */
+    }
+}

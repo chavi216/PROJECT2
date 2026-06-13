@@ -1,0 +1,66 @@
+/* Frontend/src/pages/Nutritionist/styles/NutritionistDashboard.css */
+
+.nutritionist-dashboard-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nutritionist-dashboard-title {
+    color: var(--text-dark, #333);
+    margin-bottom: 5px;
+}
+
+.nutritionist-dashboard-subtitle {
+    color: var(--text-light, #666);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* מערכת גריד רספונסיבית לכרטיסיות */
+.nutritionist-stats-grid {
+    display: grid;
+    /* הכרטיסיות יתפסו לפחות 250px ויתרחבו או ירדו שורה בהתאם למקום הפנוי */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.nutritionist-stat-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: var(--border-radius, 8px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* אפקט ריחוף (Hover) לכרטיסיות */
+.nutritionist-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.nutritionist-stat-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.nutritionist-stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #007bff; /* צבע כחול ייחודי לדשבורד תזונאי */
+    margin: 15px 0 0 0;
+}
+
+/* התאמות למסכים קטנים (מובייל) */
+@media (max-width: 768px) {
+    .nutritionist-dashboard-container {
+        padding: 10px;
+    }
+    
+    .nutritionist-stat-number {
+        font-size: 28px;
+    }
+}

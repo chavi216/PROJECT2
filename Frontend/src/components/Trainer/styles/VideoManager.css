@@ -1,0 +1,50 @@
+/* VideoManager.css - גרסה רספונסיבית */
+
+.video-manager-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box; /* מבטיח שה-Padding לא יחרוג מהמסך */
+}
+
+.video-manager-input,
+.video-manager-select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px; /* הגדלתי את ה-padding ללחיצה נוחה במובייל */
+    box-sizing: border-box;
+    font-size: 16px; /* מונע זום אוטומטי ב-iOS */
+}
+
+.video-manager-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.video-manager-upload-box {
+    padding: 30px 20px; /* הגדלתי את אזור הלחיצה */
+    border: 2px dashed #aaa;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    transition: background-color 0.2s ease;
+}
+
+.video-manager-upload-box:hover {
+    background-color: #f1f1f1;
+}
+
+/* התאמה למובייל */
+@media (max-width: 480px) {
+    .video-manager-container {
+        padding: 15px;
+    }
+    
+    .video-manager-upload-box {
+        padding: 20px 10px; /* צמצום ריווחים כדי שלא יתפוס יותר מדי גובה */
+    }
+}

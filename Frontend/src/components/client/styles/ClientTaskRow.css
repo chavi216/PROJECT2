@@ -1,0 +1,56 @@
+/* TaskRow.css - גרסה רספונסיבית */
+
+.task-row {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border-right: 4px solid #3498db;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+  direction: rtl;
+  width: 100%;       /* מבטיח ניצול מלא של רוחב ההורה */
+  box-sizing: border-box; /* מונע מה-padding "לפרוץ" את המסגרת */
+}
+
+.task-row:hover {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.task-row.task-completed {
+  border-right-color: #2ecc71;
+  background-color: #f8f9fa;
+  opacity: 0.8;
+}
+
+.task-info-container {
+  cursor: pointer;
+  flex-grow: 1;
+  overflow: hidden; /* מונע מטקסט ארוך מדי לשבור את ה-layout */
+}
+
+.task-title {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  color: #2c3e50;
+  white-space: nowrap;      /* טקסט בשורה אחת */
+  overflow: hidden;         /* הסתרת חריגות */
+  text-overflow: ellipsis;  /* הוספת שלוש נקודות אם הטקסט ארוך מדי */
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+  .task-row {
+    padding: 12px;
+  }
+  
+  .task-title {
+    font-size: 14px; /* גודל קטן יותר כדי שייכנס בתצוגת מובייל */
+  }
+  
+  .task-body-text {
+    font-size: 13px;
+  }
+}

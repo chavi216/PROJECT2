@@ -1,0 +1,95 @@
+/* Frontend/src/pages/Nutritionist/styles/NutritionistTasks.css */
+
+.nutritionist-tasks-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nutritionist-tasks-loading {
+    padding: 20px;
+    font-size: 1.1rem;
+    color: var(--text-light, #666);
+}
+
+.nutritionist-tasks-header {
+    margin-bottom: 20px;
+}
+
+.nutritionist-tasks-title {
+    color: var(--text-dark, #333);
+    margin-bottom: 5px;
+    font-size: 2rem;
+}
+
+.nutritionist-tasks-subtitle {
+    color: var(--text-light, #666);
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* אזור בחירת המטופל */
+.nutritionist-tasks-select-wrapper {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: var(--border-radius, 8px);
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* מרווח בין התווית לתיבת הבחירה */
+}
+
+.nutritionist-tasks-label {
+    font-weight: bold;
+    color: var(--text-dark, #333);
+}
+
+.nutritionist-tasks-select {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    min-width: 250px;
+    font-size: 16px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nutritionist-tasks-select:focus {
+    outline: none;
+    border-color: #007bff; /* כחול של התזונאי כשהתיבה לחוצה */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+/* מצב שבו לא נבחר עדיין מטופל */
+.nutritionist-tasks-empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius, 8px);
+    border: 1px dashed #ccc;
+    color: var(--text-light, #666);
+    font-size: 1.1rem;
+}
+
+/* התאמות למסכים קטנים (מובייל) */
+@media (max-width: 768px) {
+    .nutritionist-tasks-container {
+        padding: 10px;
+    }
+
+    .nutritionist-tasks-title {
+        font-size: 1.5rem;
+    }
+
+    .nutritionist-tasks-select-wrapper {
+        flex-direction: column; /* מסדר את התווית ואת התיבה אחד מעל השני במובייל */
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nutritionist-tasks-select {
+        width: 100%; /* תיבת הבחירה תתפוס 100% מרוחב המסך שיהיה נוח ללחיצה */
+    }
+}

@@ -1,0 +1,76 @@
+/* Frontend/src/pages/Client/styles/ClientVideos.css */
+
+.client-videos-container {
+    padding: 30px;
+    max-width: 1000px; /* מעט רחב יותר כדי להכיל יפה סרטונים */
+    margin: 0 auto;
+}
+
+.client-videos-loading {
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-light, #666);
+}
+
+.client-videos-error {
+    color: #dc3545; /* אדום לשגיאות */
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: var(--border-radius, 8px);
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.client-videos-title {
+    color: var(--text-dark, #333);
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.client-videos-divider {
+    border: 0;
+    border-top: 2px solid #eee;
+    margin: 20px 0;
+}
+
+.client-videos-empty {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border: 1px dashed #ccc;
+    border-radius: var(--border-radius, 8px);
+    color: var(--text-light, #666);
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+/* הגריד של הסרטונים - הפתרון הרספונסיבי המושלם */
+.client-videos-grid {
+    display: grid;
+    /* כל סרטון יתפוס מינימום 280 פיקסלים. אם יש פחות מזה במסך - הם ירדו לעמודה אחת! */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* התאמות למסכים קטנים (מובייל) */
+@media (max-width: 768px) {
+    .client-videos-container {
+        padding: 15px;
+    }
+
+    .client-videos-title {
+        font-size: 1.6rem;
+    }
+
+    .client-videos-divider {
+        margin: 15px 0;
+    }
+    
+    .client-videos-grid {
+        gap: 20px; /* קצת פחות מרווח בין סרטונים בנייד */
+    }
+}

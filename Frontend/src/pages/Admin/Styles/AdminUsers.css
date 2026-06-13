@@ -1,0 +1,97 @@
+/* Frontend/src/pages/Admin/styles/AdminUsers.css */
+
+.admin-users-container {
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    direction: rtl;
+}
+
+.admin-users-title {
+    margin-bottom: 20px;
+    color: var(--text-dark, #333);
+}
+
+/* הודעות מערכת */
+.admin-users-message {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: var(--border-radius, 4px);
+    font-weight: 500;
+}
+
+.admin-users-message.success {
+    background-color: #e6f4ea;
+    color: #137333;
+    border: 1px solid #ceead6;
+}
+
+.admin-users-message.error {
+    background-color: #fce8e6;
+    color: #c5221f;
+    border: 1px solid #f8d7da;
+}
+
+/* מעטפת טבלה רספונסיבית */
+.admin-users-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: var(--border-radius, 8px);
+}
+
+.admin-users-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+.admin-users-table thead tr {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    text-align: right;
+}
+
+.admin-users-table th, 
+.admin-users-table td {
+    padding: 12px;
+    border-bottom: 1px solid #dee2e6;
+    color: var(--text-dark, #333);
+}
+
+.admin-users-table td.role-cell {
+    font-weight: bold;
+    color: #555;
+}
+
+.admin-users-table td.center {
+    text-align: center;
+}
+
+/* כפתור מחיקה */
+.admin-users-btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.admin-users-btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* התאמות למסכים קטנים (מובייל) */
+@media (max-width: 768px) {
+    .admin-users-container {
+        padding: 15px;
+    }
+    
+    .admin-users-title {
+        font-size: 1.5rem;
+    }
+}

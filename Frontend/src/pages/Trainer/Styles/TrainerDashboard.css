@@ -1,0 +1,66 @@
+/* Frontend/src/pages/Trainer/TrainerDashboard.css */
+
+.trainer-dashboard-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trainer-dashboard-title {
+    color: var(--text-dark, #333);
+    margin-bottom: 5px;
+}
+
+.trainer-dashboard-subtitle {
+    color: var(--text-light, #666);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* רספונסיביות לכרטיסיות הסטטיסטיקה */
+.trainer-stats-grid {
+    display: grid;
+    /* ייצור אוטומטי של עמודות. כל עמודה תהיה לפחות 250px, ואם יש מקום היא תתרחב */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.trainer-stat-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: var(--border-radius, 8px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* אפקט ריחוף (Hover) נחמד לכרטיסיות */
+.trainer-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.trainer-stat-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.trainer-stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--primary-color, #ff4757);
+    margin: 15px 0 0 0;
+}
+
+/* התאמה למסכים קטנים (מובייל) */
+@media (max-width: 768px) {
+    .trainer-dashboard-container {
+        padding: 10px;
+    }
+    
+    .trainer-stat-number {
+        font-size: 28px;
+    }
+}

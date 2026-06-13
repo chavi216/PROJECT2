@@ -1,0 +1,51 @@
+/* FoodPlan.css - גרסה רספונסיבית */
+
+.food-plan-container {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eef2f5;
+  padding: 20px;
+  margin-bottom: 20px;
+  direction: rtl;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* מאפשר גלילה רק של הטבלה ולא של כל העמוד */
+.food-plan-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* מאפשר גלילה חלקה באייפון */
+}
+
+.food-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: right;
+  min-width: 500px; /* מבטיח שהטבלה לא תתכווץ מדי ותהפוך לקריאה */
+}
+
+.food-table th, .food-table td {
+  padding: 12px;
+  border-bottom: 1px solid #f1f3f5;
+  font-size: 15px;
+}
+
+.food-table th {
+  background-color: #f8f9fa;
+  color: #34495e;
+  font-weight: 600;
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+  .food-plan-container {
+    padding: 15px 10px;
+  }
+  
+  .food-table th, .food-table td {
+    padding: 8px;
+    font-size: 13px; /* פונט מעט קטן יותר למובייל */
+  }
+}

@@ -1,0 +1,33 @@
+/* Frontend/src/pages/Trainer/TrainerBlogs.css */
+
+.trainer-blogs-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* ממורכז במסכים גדולים */
+}
+
+.trainer-blogs-title {
+    color: var(--text-dark, #333);
+    margin-bottom: 5px;
+}
+
+.trainer-blogs-subtitle {
+    color: var(--text-light, #666);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* רספונסיביות למובייל */
+@media (max-width: 768px) {
+    .trainer-blogs-container {
+        padding: 10px; /* פדינג קטן יותר במסכים קטנים */
+    }
+    
+    .trainer-blogs-title {
+        font-size: 1.5rem;
+    }
+    
+    .trainer-blogs-subtitle {
+        font-size: 1rem;
+    }
+}

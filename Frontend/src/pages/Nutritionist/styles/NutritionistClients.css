@@ -1,0 +1,147 @@
+/* Frontend/src/pages/Nutritionist/styles/NutritionistClients.css */
+
+.nutritionist-clients-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nutritionist-clients-header {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.nutritionist-clients-title {
+    color: var(--text-dark, #333);
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* פריסת מסך ניהול התפריט (Builder + טבלה) */
+.nutritionist-diet-layout {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.nutritionist-diet-builder-side {
+    flex: 1;
+    min-width: 300px;
+}
+
+.nutritionist-diet-list-side {
+    flex: 2;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: var(--border-radius, 8px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.nutritionist-diet-list-side h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--text-dark, #333);
+}
+
+/* עיצוב טבלאות ורספונסיביות */
+.nutritionist-table-responsive {
+    width: 100%;
+    overflow-x: auto; /* מאפשר גלילה אופקית במסכים קטנים */
+    background-color: #fff;
+    border-radius: var(--border-radius, 8px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.nutritionist-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: right;
+}
+
+.nutritionist-table thead tr {
+    background-color: #f1f1f1;
+    border-bottom: 2px solid #ddd;
+}
+
+.nutritionist-table th, 
+.nutritionist-table td {
+    padding: 12px 15px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    color: var(--text-dark, #333);
+    white-space: nowrap; /* מונע שבירת שורות בתוך תאי הטבלה */
+}
+
+/* שדות קלט במצב עריכה בטבלה */
+.nutritionist-edit-input {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 90%;
+    min-width: 120px;
+}
+
+.nutritionist-edit-input.cal-input {
+    width: 80px;
+    min-width: 80px;
+}
+
+/* כפתורי פעולה בטבלה */
+.nutritionist-action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.nutritionist-action-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.btn-edit { color: #007bff; }
+.btn-delete { color: #dc3545; }
+.btn-save { color: #28a745; }
+.btn-cancel { color: #6c757d; }
+
+.nutritionist-empty-state {
+    padding: 20px;
+    text-align: center;
+    color: var(--text-light, #666);
+    margin-top: 15px;
+}
+
+/* התאמות למסכים קטנים (מובייל) */
+@media (max-width: 768px) {
+    .nutritionist-clients-container {
+        padding: 10px;
+    }
+
+    .nutritionist-clients-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nutritionist-clients-title {
+        font-size: 1.5rem;
+    }
+    
+    .nutritionist-diet-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nutritionist-diet-list-side {
+        padding: 15px;
+    }
+}

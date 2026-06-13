@@ -1,0 +1,168 @@
+/* Frontend/src/pages/Admin/styles/AdminDashboard.css */
+
+.admin-dashboard-container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    direction: rtl;
+}
+
+.admin-dashboard-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-dark, #333);
+}
+
+.admin-dashboard-loading {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1rem;
+    color: var(--text-light, #666);
+}
+
+/* הודעות מערכת */
+.admin-dashboard-message {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius, 4px);
+    text-align: center;
+    font-weight: 500;
+}
+
+.admin-dashboard-message.success {
+    background-color: #e6f4ea;
+    color: #137333;
+    border: 1px solid #ceead6;
+}
+
+.admin-dashboard-message.error {
+    background-color: #fce8e6;
+    color: #c5221f;
+    border: 1px solid #fad2cf;
+}
+
+/* תפריט לשוניות (Tabs) */
+.admin-tabs-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    overflow-x: auto; /* מאפשר גלילה של הלשוניות במסכים קטנים */
+    white-space: nowrap; /* מונע שבירת שורות בתוך הכפתורים */
+}
+
+/* הסתרת פס הגלילה ליופי (אופציונלי) */
+.admin-tabs-container::-webkit-scrollbar {
+    height: 4px;
+}
+.admin-tabs-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.admin-tab-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: #eee;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.admin-tab-button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.admin-tab-button:hover:not(.active) {
+    background-color: #e0e0e0;
+}
+
+/* עיצוב טבלאות */
+.admin-table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-radius: var(--border-radius, 8px);
+    margin-top: 10px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px; /* מכריח את הטבלה להישאר רחבה כדי לאפשר גלילה בנייד */
+}
+
+.admin-table thead tr {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    text-align: right;
+}
+
+.admin-table th, 
+.admin-table td {
+    padding: 12px;
+    border-bottom: 1px solid #dee2e6;
+    color: var(--text-dark, #333);
+}
+
+.admin-table th.center,
+.admin-table td.center {
+    text-align: center;
+}
+
+/* תגיות תפקידים (Badges) */
+.admin-role-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.role-admin { background-color: #fad2cf; color: #c5221f; }
+.role-trainer { background-color: #e8f0fe; color: #1a73e8; }
+.role-nutritionist { background-color: #e6f4ea; color: #137333; }
+.role-client { background-color: #f1f3f4; color: #3c4043; }
+
+/* כפתור מחיקה ספציפי לטבלאות אדמין */
+.admin-btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.admin-btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* קישורים בטבלה */
+.admin-table-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.admin-table-link:hover {
+    text-decoration: underline;
+}
+
+/* התאמות למסכים קטנים (מובייל) */
+@media (max-width: 768px) {
+    .admin-dashboard-container {
+        padding: 15px;
+    }
+    
+    .admin-dashboard-title {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+}

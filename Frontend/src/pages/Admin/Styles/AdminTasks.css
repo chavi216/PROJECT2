@@ -1,0 +1,116 @@
+/* Frontend/src/pages/Admin/styles/AdminTasks.css */
+
+.admin-tasks-container {
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    direction: rtl;
+}
+
+.admin-tasks-title {
+    margin-bottom: 20px;
+    color: var(--text-dark, #333);
+}
+
+/* הודעות מערכת */
+.admin-tasks-message {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: var(--border-radius, 4px);
+    font-weight: 500;
+}
+
+.admin-tasks-message.success {
+    background-color: #e6f4ea;
+    color: #137333;
+    border: 1px solid #ceead6;
+}
+
+.admin-tasks-message.error {
+    background-color: #fce8e6;
+    color: #c5221f;
+    border: 1px solid #f8d7da;
+}
+
+/* מעטפת רספונסיבית לטבלה */
+.admin-tasks-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: var(--border-radius, 8px);
+}
+
+.admin-tasks-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px; /* מבטיח שהטבלה תאפשר גלילה במובייל ולא תתכווץ יותר מדי */
+}
+
+.admin-tasks-table thead tr {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    text-align: right;
+}
+
+.admin-tasks-table th, 
+.admin-tasks-table td {
+    padding: 12px;
+    border-bottom: 1px solid #dee2e6;
+    color: var(--text-dark, #333);
+}
+
+.admin-tasks-table th.center,
+.admin-tasks-table td.center {
+    text-align: center;
+}
+
+.admin-tasks-table td.bold {
+    font-weight: bold;
+}
+
+/* עיצוב סטטוס (Badges) */
+.task-status {
+    display: inline-block;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+.task-status.completed {
+    background-color: #e6f4ea;
+    color: #137333;
+}
+
+.task-status.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* כפתור מחיקה של אדמין */
+.admin-tasks-btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.admin-tasks-btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* התאמות למסכים קטנים (מובייל) */
+@media (max-width: 768px) {
+    .admin-tasks-container {
+        padding: 15px;
+    }
+    
+    .admin-tasks-title {
+        font-size: 1.5rem;
+    }
+}

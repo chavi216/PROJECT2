@@ -1,0 +1,33 @@
+.auth-page { min-height: 100vh; display: grid; grid-template-columns: minmax(330px,38%) 1fr; background: #fff; }
+.auth-showcase { position: relative; min-height: 100vh; padding: 44px clamp(32px,5vw,68px); display: flex; flex-direction: column; overflow: hidden; color: #fff; background: linear-gradient(145deg,#0f172a,#172554); }
+.auth-showcase::before { content: ''; position: absolute; inset: 0; opacity: .18; background-image: linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px); background-size: 42px 42px; mask-image: linear-gradient(to bottom,#000,transparent 85%); }
+.auth-showcase::after { content: ''; position: absolute; width: 360px; height: 360px; left: -160px; bottom: -180px; border-radius: 50%; background: var(--blue); filter: blur(20px); opacity: .48; }
+.auth-brand { position: relative; z-index: 2; width: max-content; display: flex; flex-direction: column; color: #fff; text-decoration: none; }
+.auth-brand span { font-size: 22px; font-weight: 750; }
+.auth-brand small { margin-top: 6px; color: #94a3b8; font-size: 10px; }
+.auth-form-side { min-width: 0; padding: 46px clamp(24px,7vw,110px); display: grid; place-items: center; background: #fff; }
+.login-container { width: min(410px,100%); direction: rtl; }
+.login-title { margin-bottom: 9px; color: var(--navy); font-size: clamp(1.9rem,4vw,2.45rem); text-align: right; }
+.login-title::after { content: 'התחברו למערכת הניהול שלכם'; display: block; margin-top: 10px; color: var(--muted); font-size: 14px; font-weight: 400; }
+.login-error { margin: 18px 0; padding: 11px 13px; color: #991b1b; background: #fef2f2; border: 1px solid #fecaca; border-radius: 9px; }
+.login-form { display: flex; flex-direction: column; gap: 17px; margin-top: 28px; }
+.login-button-wrapper { margin-top: 5px; }
+.login-button-wrapper .custom-btn { width: 100%; min-height: 49px; }
+.login-footer { margin-top: 23px; color: var(--muted); font-size: 14px; text-align: center; }
+.login-footer .login-link { color: var(--blue); font-weight: 700; text-decoration: none; }
+.auth-art { position: relative; z-index: 2; flex: 1; min-height: 380px; }
+.art-orbit { position: absolute; border: 1px solid rgba(96,165,250,.22); border-radius: 50%; }
+.orbit-one { width: 330px; height: 330px; top: 16%; right: 4%; }
+.orbit-two { width: 230px; height: 230px; top: 29%; right: 19%; }
+.art-card { position: absolute; display: flex; flex-direction: column; border: 1px solid rgba(148,163,184,.18); backdrop-filter: blur(12px); }
+.art-card-main { width: min(320px,84%); min-height: 190px; top: 26%; right: 7%; padding: 28px; border-radius: 16px; background: rgba(30,41,59,.72); box-shadow: 0 24px 60px rgba(0,0,0,.2); }
+.art-card-main strong { color: #94a3b8; font-size: 13px; }
+.art-card-main b { margin-top: 9px; color: #fff; font-size: clamp(1.8rem,4vw,2.65rem); line-height: 1.1; }
+.art-card-main small { margin-top: auto; color: #94a3b8; }
+.art-card-float { left: 2%; bottom: 14%; padding: 15px 18px; border-radius: 12px; background: var(--blue); box-shadow: 0 14px 35px rgba(37,99,235,.28); }
+.art-card-float span { font-size: 22px; font-weight: 750; direction: ltr; }
+.art-card-float small { margin-top: 3px; color: #dbeafe; }
+.auth-quote { position: relative; z-index: 2; max-width: 360px; }
+.auth-quote span { display: none; }
+.auth-quote p { color: #94a3b8; font-size: 13px; }
+@media (max-width: 850px) { .auth-page { grid-template-columns: 1fr; } .auth-showcase { min-height: 175px; padding: 27px 22px; } .auth-art,.auth-quote { display: none; } .auth-form-side { padding: 38px 21px 54px; } }

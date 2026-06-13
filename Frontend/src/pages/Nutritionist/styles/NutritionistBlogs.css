@@ -1,0 +1,38 @@
+/* Frontend/src/pages/Nutritionist/styles/NutritionistBlogs.css */
+
+.nutritionist-blogs-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nutritionist-blogs-header {
+    margin-bottom: 20px;
+}
+
+.nutritionist-blogs-title {
+    color: var(--text-dark, #333);
+    margin-bottom: 5px;
+    font-size: 2rem;
+}
+
+.nutritionist-blogs-subtitle {
+    color: var(--text-light, #666);
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* התאמות למסכים קטנים (מובייל) */
+@media (max-width: 768px) {
+    .nutritionist-blogs-container {
+        padding: 10px;
+    }
+
+    .nutritionist-blogs-title {
+        font-size: 1.5rem;
+    }
+    
+    .nutritionist-blogs-subtitle {
+        font-size: 1rem;
+    }
+}
