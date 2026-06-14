@@ -1,14 +1,14 @@
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { apiService } from '../../api/api';
-import './styles/NutritionistDashboard.css'; // ✅ ייבוא קובץ העיצוב החדש
+import './styles/NutritionistDashboard.css'; 
 
 const NutritionistDashboardPage = () => {
     const { user } = useContext(AuthContext);
     const [stats, setStats] = useState({
         activeClients: 0,
-        pendingTasks: 0, // יעודכן בעתיד מול השרת
-        unreadMessages: 0 // יעודכן בעתיד מול השרת
+        pendingTasks: 0, 
+        unreadMessages: 0 
     });
 
     useEffect(() => {

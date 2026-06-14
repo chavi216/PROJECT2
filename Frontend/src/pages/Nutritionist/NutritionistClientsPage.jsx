@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Button from '../../components/common/Button';
 import { apiService } from '../../api/api';
 import DietPlanBuilder from '../../components/nutritionist/DietPlanBuilder';
-import './styles/NutritionistClients.css'; // ✅ ייבוא העיצוב החדש
+import './styles/NutritionistClients.css'; 
 
 const NutritionistClientsPage = () => {
     const [clients, setClients] = useState([]);

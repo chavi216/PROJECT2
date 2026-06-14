@@ -26,7 +26,6 @@ export const getClientFoodLogsFromDB = async (To_ID) => {
 };
 
 export const getMyClientsFromDB = async (nutritionistId) => {
-    // שולף רק את המשתמשים שהתזונאי שלהם הוא מי שמחובר עכשיו
     const query = `SELECT ID, name, email, phone_number FROM Users WHERE nutritionist_id = ? AND role = 'client'`;
     const [rows] = await db.query(query, [nutritionistId]);
     return rows;

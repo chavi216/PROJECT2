@@ -12,7 +12,7 @@ export const nutritionistApi = {
     method: 'DELETE',
   }),
 
-  // -- הפונקציה החדשה לעדכון תפריט --
+  // -- הפונקציה לעדכון תפריט --
   updateFoodPlan: (tableId, updateData) => fetchWithErrorHandling(`/nutritionist/food-plan/${tableId}`, {
     method: 'PUT',
     body: JSON.stringify(updateData),

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { apiService } from '../../api/api';
 import TaskManager from '../../components/common/TaskManager';
-import './styles/NutritionistTasks.css'; // ✅ ייבוא קובץ העיצוב החדש
+import './styles/NutritionistTasks.css'; 
 
 const NutritionistTasksPage = () => {
     const [clients, setClients] = useState([]);

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { apiService } from '../../api/api';
-import './Styles/AdminUsers.css'; // ✅ ייבוא קובץ העיצוב החדש
+import './Styles/AdminUsers.css'; 
 
 const AdminUsersPage = () => {
   const [users, setUsers] = useState([]);

@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react';
 import { apiService } from '../../api/api';
-import './Styles/AdminBlogs.css'// ✅ ייבוא קובץ העיצוב החדש
+import './Styles/AdminBlogs.css'
 
 const AdminDashboardPage = () => {
-  const [activeTab, setActiveTab] = useState('users'); // 'users' | 'blogs' | 'videos'
+  const [activeTab, setActiveTab] = useState('users'); 
   const [users, setUsers] = useState([]);
   const [blogs, setBlogs] = useState([]);
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState({ text: '', type: '' });
 
-  // טעינת נתונים בהתאם ללשונית הפעילה
   const fetchData = async () => {
     setLoading(true);
     setMessage({ text: '', type: '' });

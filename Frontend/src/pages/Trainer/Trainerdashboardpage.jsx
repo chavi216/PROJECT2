@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { apiService } from '../../api/api';
-import './Styles/TrainerDashboard.css'; // ✅ ייבוא קובץ ה-CSS החדש
+import './Styles/TrainerDashboard.css'; 
 
 const TrainerDashboardPage = () => {
     const { user } = useContext(AuthContext);

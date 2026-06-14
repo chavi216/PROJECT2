@@ -1,5 +1,5 @@
 import BlogManager from '../../components/common/BlogManager';
-import './styles/NutritionistBlogs.css'; // ✅ ייבוא מתוך תיקיית styles
+import './styles/NutritionistBlogs.css'; 
 
 const NutritionistBlogsPage = () => {
     return (

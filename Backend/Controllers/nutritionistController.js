@@ -1,20 +1,7 @@
 import * as nutritionistService from '../services/nutritionistService.js';
 
-// export const createFoodPlan = async (req, res) => {
-//     try {
-//         const planData = {
-//             ...req.body,
-//             From_ID: req.user.ID 
-//         };
-//         await nutritionistService.handleCreateFoodPlan(planData);
-//         res.status(201).json({ message: 'Food plan created successfully' });
-//     } catch (error) {
-//         res.status(400).json({ error: error.message });
-//     }
-// };
 
 export const createFoodPlan = async (req, res) => {
-    // 🌟 זה יגלה לנו הכל:
     
     try {
         const planData = {

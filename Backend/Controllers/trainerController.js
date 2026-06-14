@@ -87,12 +87,11 @@ export const createBlog = async (req, res) => {
 };
 export const assignTask = async (req, res) => {
     try {
-        // משיכת ה-ID של המאמן המחובר בצורה בטוחה
         const trainerId = req.user?.id || req.user?.ID || 1;
         
         const taskData = {
             manager_ID: trainerId, 
-            ...req.body // Body, Title, client_ID
+            ...req.body 
         };
         
         await trainerService.handleAssignTask(taskData);

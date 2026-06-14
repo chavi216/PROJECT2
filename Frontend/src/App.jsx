@@ -60,7 +60,6 @@ function App() {
         <Route path="/register" element={<Register />} />
 
         {/* 🔒 נתיבים מוגנים עבור לקוח */}
-        {/* 🔒 נתיבים מוגנים עבור לקוח */}
         <Route 
           path="/client/onboarding" 
           element={

@@ -1,7 +1,6 @@
 import VideoManager from '../../components/Trainer/VideoManager';
 import TrainerVideoLibrary from '../../components/Trainer/TrainerVideoLibrary';
-import './Styles/TrainerVideos.css'; // ✅ ייבוא קובץ ה-CSS החדש
-
+import './Styles/TrainerVideos.css'; 
 const TrainerVideosPage = () => {
   return (
     <div className="trainer-videos-container">

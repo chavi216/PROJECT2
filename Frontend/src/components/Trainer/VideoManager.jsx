@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { apiService } from '../../api/api';
 import Button from '../common/Button';
-import './styles/VideoManager.css'; // ייבוא קובץ העיצוב
+import './styles/VideoManager.css'; 
 
 const VideoManager = ({ role }) => {
     const [title, setTitle] = useState('');

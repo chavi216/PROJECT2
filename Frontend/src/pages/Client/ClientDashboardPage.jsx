@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { apiService } from '../../api/api';
 import ClientProfileCard from '../../components/client/ClientProfileCard';
 import { useNavigate } from 'react-router-dom';
-import './Styles/ClientDashboard.css'; // ✅ ייבוא קובץ העיצוב החדש
+import './Styles/ClientDashboard.css'; 
 
 const ClientDashboardPage = () => {
   const [profile, setProfile] = useState(null);
@@ -15,7 +15,6 @@ const ClientDashboardPage = () => {
       try {
         const data = await apiService.client.getInfo();
         
-        // --- שינוי זמני: כאן אנחנו בודקים רק את התזונאי ---
         if (!data.nutritionist_id) {
           navigate('/client/onboarding');
           return; 

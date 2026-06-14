@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { apiService } from '../../api/api';
-import './Styles/AdminVideos.css'; // ✅ ייבוא העיצוב החדש
+import './Styles/AdminVideos.css'; 
 
 const AdminVideosPage = () => {
   const [videos, setVideos] = useState([]);

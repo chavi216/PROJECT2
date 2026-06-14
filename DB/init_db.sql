@@ -40,7 +40,6 @@ CREATE TABLE IF NOT EXISTS Tasks (
     manager_ID INT,
     client_ID INT,
     completed BOOLEAN,
-    -- שינוי: אם המאמן/תזונאי (המנהל) או הלקוח נמחקים, גם המשימות שקשורות אליהם יימחקו אוטומטית
     FOREIGN KEY (manager_ID) REFERENCES Users(ID) ON DELETE CASCADE,
     FOREIGN KEY (client_ID) REFERENCES Users(ID) ON DELETE CASCADE
 );
@@ -52,7 +51,6 @@ CREATE TABLE IF NOT EXISTS Messages (
     to_ID INT,
     body TEXT,
     is_read BOOLEAN,
-    -- שינוי: אם השולח או המקבל נמחקים, ההודעות שלהם יימחקו
     FOREIGN KEY (from_ID) REFERENCES Users(ID) ON DELETE CASCADE,
     FOREIGN KEY (to_ID) REFERENCES Users(ID) ON DELETE CASCADE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -66,7 +64,6 @@ CREATE TABLE IF NOT EXISTS FoodLog (
     food VARCHAR(255),
     calories INT,
     date DATE
-    -- הערה: אין כאן הגדרת FOREIGN KEY בקוד המקורי שלך, ולכן השארתי כפי שזה.
 );
 
 -- יצירת טבלת התראות
@@ -74,7 +71,6 @@ CREATE TABLE IF NOT EXISTS Notifications (
     Task_ID INT PRIMARY KEY AUTO_INCREMENT,
     User_ID INT,
     Manager_ID INT,
-    -- שינוי: מחיקה של משתמש תמחק את ההתראות שקשורות אליו
     FOREIGN KEY (User_ID) REFERENCES Users(ID) ON DELETE CASCADE,
     FOREIGN KEY (Manager_ID) REFERENCES Users(ID) ON DELETE CASCADE
 );
@@ -87,7 +83,6 @@ CREATE TABLE IF NOT EXISTS FitnessVideos (
     title VARCHAR(255),
     video_url VARCHAR(255),
     audience_type VARCHAR(50) DEFAULT 'all',
-    -- שינוי: אם יוצר הסרטון נמחק, הסרטונים שלו יימחקו. אם לקוח יעד נמחק, זה יתאפס ל-NULL
     FOREIGN KEY (From_ID) REFERENCES Users(ID) ON DELETE CASCADE,
     FOREIGN KEY (To_ID) REFERENCES Users(ID) ON DELETE SET NULL
 );

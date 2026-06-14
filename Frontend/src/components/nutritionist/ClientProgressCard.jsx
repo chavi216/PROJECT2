@@ -1,4 +1,4 @@
-import './styles/ClientProgressCard.css'; // ייבוא הסטייל המופרד
+import './styles/ClientProgressCard.css'; 
 
 const ClientProgressCard = ({ client }) => {
     if (!client) {

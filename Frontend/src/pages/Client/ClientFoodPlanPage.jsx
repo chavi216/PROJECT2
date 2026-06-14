@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { apiService } from '../../api/api';
 import FoodPlanDayTable from '../../components/client/FoodPlanDayTable';
-import './Styles/ClientFoodPlan.css'; // ✅ ייבוא קובץ העיצוב החדש
+import './Styles/ClientFoodPlan.css'; 
 
 const ClientFoodPlanPage = () => {
   const [foodLogs, setFoodLogs] = useState([]);

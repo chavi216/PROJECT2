@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Input from '../common/Input';
 import Button from '../common/Button';
-import { apiService } from '../../api/api'; // הוספנו ייבוא של ה-API
+import { apiService } from '../../api/api'; 
 import './styles/DietPlanBuilder.css';
 
 const DietPlanBuilder = ({ clientId, onSaveSuccess }) => {
@@ -26,12 +26,11 @@ const DietPlanBuilder = ({ clientId, onSaveSuccess }) => {
         setLoading(true);
 
         try {
-            // קריאה לשרת עם המבנה שהמודל מצפה לו
             await apiService.nutritionist.createFoodPlan({
-                To_ID: clientId,       // ה-ID של הלקוח
-                food: foodName,        // שם המאכל
-                calories: parseInt(calories), // המרה למספר
-                date: date             // תאריך
+                To_ID: clientId,       
+                food: foodName,        
+                calories: parseInt(calories), 
+                date: date           
             });
 
             alert('הארוחה התווספה בהצלחה לתפריט המטופל!');

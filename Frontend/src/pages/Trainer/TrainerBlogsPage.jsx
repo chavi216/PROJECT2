@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { apiService } from '../../api/api';
 import BlogManager from '../../components/common/BlogManager';
-import './Styles/TrainerBlogs.css'; // ✅ ייבוא קובץ ה-CSS החדש
+import './Styles/TrainerBlogs.css'; 
 
 const TrainerBlogsPage = () => {
   const [clients, setClients] = useState([]);

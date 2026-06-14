@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { apiService } from '../../api/api';
 import Button from './Button';
-import './styles/BlogManager.css'; // ייבוא של קובץ העיצוב החדש
+import './styles/BlogManager.css'; 
 
 const BlogManager = ({ role }) => {
     const [blogs, setBlogs] = useState([]);

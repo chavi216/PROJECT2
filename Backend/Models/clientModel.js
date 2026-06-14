@@ -3,7 +3,6 @@ import fs from 'fs/promises';
 import path from 'path';
 
 export const getClientInfoFromDB = async (client_ID) => {
-    // שינוי profile_image_url ל-profile_image
     const query = `SELECT ID, name, email, role, address, phone_number, trainer_id, nutritionist_id, profile_image 
                    FROM Users WHERE ID = ?`;
     const [rows] = await db.query(query, [client_ID]);
@@ -11,7 +10,6 @@ export const getClientInfoFromDB = async (client_ID) => {
 };
 
 export const updateClientProfileImageInDB = async (client_ID, imageUrl) => {
-    // שינוי profile_image_url ל-profile_image
     const query = `UPDATE Users SET profile_image = ? WHERE ID = ?`;
     const [result] = await db.query(query, [imageUrl, client_ID]);
     return result;
@@ -24,11 +22,9 @@ export const getClientVideosFromDB = async (client_ID) => {
 };
 
 export const getAllBlogsFromDB = async () => {
-    // SELECT * שולף גם את ה-file_path שהוספנו
     const query = `SELECT * FROM Blogs ORDER BY blog_ID DESC`;
     const [rows] = await db.query(query);
 
-    // רצים על כל הבלוגים וקוראים את התוכן מהקובץ אם הוא קיים
     const blogsWithContent = await Promise.all(rows.map(async (blog) => {
         try {
             if (blog.file_path) {

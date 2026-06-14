@@ -14,7 +14,6 @@ const router = express.Router();
 router.use(verifyToken);
 router.use(isClient); 
 
-// 2. הגדרת הנתיבים (כולל העלאת התמונה כעת נמצאת תחת המטריה של המאומתים)
 router.post('/upload-image', (req, res, next) => {
     uploadProfileImageFile.single('profileImage')(req, res, (error) => {
         if (!error) return next();

@@ -19,7 +19,6 @@ const storage = multer.diskStorage({
 });
 
 const fileFilter = (req, file, cb) => {
-    // השארתי את התמיכה בתמונות, וידאו, והוספתי קבצי טקסט
     const allowedTypes = [
         'video/mp4',
         'video/mov',
@@ -30,18 +29,16 @@ const fileFilter = (req, file, cb) => {
         'image/jpg',
         'image/webp',
         'image/gif',
-        'text/plain' // <-- הוספנו את זה בשביל הבלוגים
+        'text/plain' 
     ];
 
     if (allowedTypes.includes(file.mimetype)) {
         cb(null, true);
     } else {
-        // עדכנו את הודעת השגיאה שתכלול גם טקסט
         cb(new Error('Only video, image, and text files are allowed'));
     }
 };
 
-// החזרנו את השם המקורי כדי שהפרויקט יעבוד בלי לשנות את כל ה-Routes
 export const uploadVideoFile = multer({
     storage,
     fileFilter,

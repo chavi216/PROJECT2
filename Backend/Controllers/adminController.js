@@ -26,7 +26,7 @@ export const deleteUserController = async (req, res) => {
 // קונטרולר למחיקת תוכן (בלוג/סרטון)
 export const deleteContentController = async (req, res) => {
     try {
-        const { type, id } = req.params; // למשל type='blog', id=5
+        const { type, id } = req.params; 
         
         await adminService.removeContent(type, parseInt(id));
         res.status(200).json({ message: `${type} deleted successfully!` });

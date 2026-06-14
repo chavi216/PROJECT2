@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { apiService } from '../../api/api';
-import './Styles/AdminBlogs.css'; // ✅ ייבוא קובץ העיצוב החדש
+import './Styles/AdminBlogs.css'; 
 
 const AdminBlogsPage = () => {
   const [blogs, setBlogs] = useState([]);
@@ -64,7 +64,6 @@ const AdminBlogsPage = () => {
                   <td>{blog.author_name}</td>
                   <td>{blog.audience_type}</td>
                   <td className="center">
-                    {/* השתמשתי בכפתור HTML רגיל כדי שיקבל את העיצוב הייעודי והקומפקטי של טבלת אדמין במקום Button כללי */}
                     <button 
                       className="admin-btn-delete" 
                       onClick={() => handleDeleteBlog(blog.blog_ID, blog.Title)}

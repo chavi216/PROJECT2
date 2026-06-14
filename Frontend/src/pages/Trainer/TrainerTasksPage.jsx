@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { apiService } from '../../api/api';
 import TaskManager from '../../components/common/TaskManager';
-import './Styles/TrainerTasks.css'; // ✅ ייבוא קובץ ה-CSS החדש
+import './Styles/TrainerTasks.css'; 
 
 const TrainerTasksPage = () => {
   const [clients, setClients] = useState([]);

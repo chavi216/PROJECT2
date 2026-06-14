@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { apiService } from '../../api/api';
 import ClientTaskRow from '../../components/client/ClientTaskRow';
-import './Styles/ClientTasks.css'; // ✅ ייבוא קובץ העיצוב החדש
+import './Styles/ClientTasks.css';
 
 const ClientTasksPage = () => {
   const [tasks, setTasks] = useState([]);
@@ -30,10 +30,8 @@ const ClientTasksPage = () => {
         console.log("DEBUG: Original status:", currentStatus);
         console.log("DEBUG: Sending new status to server:", newStatus);
 
-        // שליחת הערך החדש
         await apiService.client.toggleTask(taskId, newStatus);
         
-        // עדכון הסטייט המקומי כדי שהצ'קבוקס יתעדכן באתר
         setTasks(prevTasks =>
             prevTasks.map(task =>
                 task.Task_ID === taskId ? { ...task, completed: newStatus } : task

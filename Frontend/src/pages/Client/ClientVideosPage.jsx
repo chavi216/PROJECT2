@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import { apiService } from '../../api/api'; 
 import VideoPlayer from '../../components/common/VideoPlayer'; 
-import './Styles/ClientVideos.css'; // ✅ ייבוא קובץ העיצוב החדש
+import './Styles/ClientVideos.css'; 
 
-// מגדירים את הכתובת של השרת (Backend) שלנו
 const BASE_URL = 'http://localhost:3000';
 
 const ClientVideosPage = () => {

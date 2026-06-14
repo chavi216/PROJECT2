@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { apiService } from '../../api/api';
 import Button from './Button';
-import './styles/TaskManager.css'; // ייבוא של קובץ העיצוב החדש
+import './styles/TaskManager.css'; 
 
 const TaskManager = ({ clientId, role }) => {
     const [tasks, setTasks] = useState([]);

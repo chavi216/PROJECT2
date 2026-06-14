@@ -31,27 +31,11 @@ export const getFoodPlan = async (req, res) => {
     }
 };
 
-// export const updateTask = async (req, res) => {
-//     try {
-//         const taskId = parseInt(req.params.id);
-//         const { completed } = req.body;
-//                 const userId = req.user?.id || req.user?.ID || 1; 
-        
-//         await clientService.handleUpdateTask(taskId, userId, completed);
-//         res.status(200).json({ message: 'Task status updated successfully' });
-//     } catch (error) {
-//         console.error("Error in updateTask:", error);
-//         res.status(400).json({ error: error.message });
-//     }
-// };
+
 export const updateTask = async (req, res) => {
     try {
         const taskId = parseInt(req.params.id);
-        // שימוש ב-req.body.completed ישירות, בלי בדיקות מיותרות שיכולות להפוך 0 ל-undefined
-        const completed = req.body.completed; 
-
-        // ודאי שהשרת מקבל את הערך ששלחנו
-        
+        const completed = req.body.completed;         
         await clientService.handleUpdateTask(taskId, req.user.id, completed);
         res.status(200).json({ message: 'Task status updated successfully' });
     } catch (error) {

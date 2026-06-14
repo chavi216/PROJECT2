@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { clientApi } from '../../api/clientApi';
 import Button from '../../components/common/Button';
-import './Styles/ClientOnboarding.css'; // ✅ ייבוא קובץ העיצוב החדש
+import './Styles/ClientOnboarding.css'; 
 
 const ClientOnboarding = () => {
   const [trainers, setTrainers] = useState([]);
